@@ -8,18 +8,13 @@
         <h1><a href="#">Savings Account</a></h1>
       </div>
 
-      <div class="">
-        <p>published 21.04.2020</p>
-        <h3><a href="#">Sub-saving Account</a></h3>
-        <p>This is a kind of account in which stipulated money you've specified the bank to deduct from your account into this saving account for investment ot targeted purposes. tjos kind of account can be operated vis the mobile app and you have access to it if you want to make use of the money. Its kind of a linient savings account.  </p>
+      {% for post in posts %}
+        <div>
+          <p>published: {{ post.published_date }}</p>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div class="">
-          <p>published 22.04.2020</p>
-          <h3><a href="#">Target Savings Account</a></h3>
-          <p>This kind of account, just as similar to subsavings in which a specified ammount of money is deducted from your account into this account for a minimum of six (6) months and i  this case differ from subsavings, you do not have access to themoney in this account until the stipulaed freezing time is reached, and you can have maximum of this targted account to plan for various events and materials you want to make a success as convenient as posssible. For example, I can have a target account for education also have for accomodation and also for wedding. These make achieving goals easier than you think. </p>
-        </div>
-
+      {% endfor %}
 
   </body>
 </html>
